@@ -1,0 +1,8 @@
+.DS_Store
+
+.venv
+.env
+
+.vscode
+
+.mypy_cacheJ
