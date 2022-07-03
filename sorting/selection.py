@@ -22,5 +22,3 @@ def selection_sort(array: List) -> Tuple[List, int]:
 
 
 sorted_list, count_iterations = selection_sort(unsorted_list)
-
-print(f"Sorted list: {sorted_list}\n{count_iterations = }")

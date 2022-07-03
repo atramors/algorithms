@@ -23,5 +23,3 @@ def bubble_sort(array: List) -> Tuple[List, int]:
 
 
 sorted_list, count_iterations = bubble_sort(unsorted_list)
-
-print(f"Sorted list: {sorted_list}\n{count_iterations = }")

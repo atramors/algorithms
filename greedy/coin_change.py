@@ -11,7 +11,7 @@ money_you_have = 500
 cost_of_goods = 113
 
 
-def greedy_algorithm(money: int, price: int) -> Dict[int, int]:
+def greedy_coin_change_problem(money: int, price: int) -> Dict[int, int]:
     """Solving coin change problem"""
 
     wallet = {500: 0, 100: 0, 50: 0, 20: 0, 10: 0, 5: 0, 2: 0, 1: 0}
@@ -23,6 +23,3 @@ def greedy_algorithm(money: int, price: int) -> Dict[int, int]:
             wallet[nominal] += 1
 
     return wallet
-
-
-print(greedy_algorithm(money_you_have, cost_of_goods))
