@@ -3,7 +3,7 @@ from search.binary import binary_search
 from search.linear import linear_search
 
 from sorting.bubble import bubble_sort
-from greedy.coin_change import greedy_coin_change_problem
+from greedy.coin_change import greedy_coin_change_problem, greedy_coin_change_problem_optional
 from sorting.insertion import insertion_sort
 from sorting.selection import selection_sort
 
@@ -28,9 +28,16 @@ class TestSortingAlgo(unittest.TestCase):
 
 class TestGreedyAlgo(unittest.TestCase):
 
-    def test_greedy(self):
+    def test_greedy_coin_change_problem(self):
         sample = {500: 0, 100: 3, 50: 1, 20: 1, 10: 1, 5: 1, 2: 1, 1: 0}
         result = greedy_coin_change_problem(500, 113)
+        self.assertEqual(result, sample)
+
+    def test_greedy_coin_change_problem_optional(self):
+        sample = [50, 25, 10, 2, 2]
+        coin_types = [1, 2, 5, 10, 25, 50]
+        money = 89
+        result = greedy_coin_change_problem_optional(money, coin_types)
         self.assertEqual(result, sample)
 
 

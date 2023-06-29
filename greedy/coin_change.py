@@ -1,6 +1,6 @@
 # GREEDY ALGORITHM
 
-from typing import Dict
+from typing import Dict, List
 
 # Let's asume you are buying something in a shop and it costs 113
 # coins, in your wallet you have one coin with denomination of 500
@@ -21,5 +21,21 @@ def greedy_coin_change_problem(money: int, price: int) -> Dict[int, int]:
         while (change - nominal) >= 0:
             change = change - nominal
             wallet[nominal] += 1
+
+    return wallet
+
+
+def greedy_coin_change_problem_optional(
+        money: int, coin_types: List) -> List[int]:
+    """Solving coin change problem"""
+
+    index = len(coin_types) - 1
+    wallet = []
+    while money:
+        if coin_types[index] <= money:
+            wallet.append(coin_types[index])
+            money -= coin_types[index]
+        else:
+            index -= 1
 
     return wallet
